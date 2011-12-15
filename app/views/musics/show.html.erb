@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Release:</b>
+  <%= @music.release %>
+</p>
+
+<p>
+  <b>Artist:</b>
+  <%= @music.artist %>
+</p>
+
+<p>
+  <b>Genre:</b>
+  <%= @music.genre %>
+</p>
+
+<p>
+  <b>Format:</b>
+  <%= @music.format %>
+</p>
+
+<p>
+  <b>Date:</b>
+  <%= @music.date %>
+</p>
+
+<p>
+  <b>Price:</b>
+  <%= @music.price %>
+</p>
+
+
+<%= link_to 'Edit', edit_music_path(@music) %> |
+<%= link_to 'Back', musics_path %>

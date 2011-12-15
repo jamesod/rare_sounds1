@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  release: MyString
+  artist: MyString
+  genre: MyString
+  format: MyString
+  date: 2011-12-15
+  price: 1.5
+
+two:
+  release: MyString
+  artist: MyString
+  genre: MyString
+  format: MyString
+  date: 2011-12-15
+  price: 1.5
