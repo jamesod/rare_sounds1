@@ -1,13 +1,21 @@
-<h1>Listing musics</h1>
+<h1>Music Catalogue</h1>
+
+<% form_tag musics_path, :method => 'get' do %>
+    <p>
+      <%= text_field_tag :search_query, params[:search_query] %>
+      <%= submit_tag "Search", :release => nil, :artist => nil %>
+    </p>
+<% end %>
 
 <table>
-  <tr>
-    <th>Release</th>
-    <th>Artist</th>
-    <th>Genre</th>
-    <th>Format</th>
-    <th>Date</th>
-    <th>Price</th>
+  <tr style="text-align: left;">
+    <th style="width:160px;">Release</th>
+    <th style="width:190px;">Artist</th>
+    <th style="width:120px;">Genre</th>
+    <th style="width:100px;">Format</th>
+    <th style="width:120px;">Date</th>
+    <th style="width:120px;">Price</th>
+    <th></th>
     <th></th>
     <th></th>
     <th></th>

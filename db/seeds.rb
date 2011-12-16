@@ -10,6 +10,6 @@
 Music.create(:release => 'Could This Be', :artist => 'Noisia', :genre => 'Drum & Bass', :format => 'Vinyl',
              :date => '2012-11-22', :price => '4.95')
 Music.create(:release => 'Baby I Got It EP', :artist => 'Miguel Campbell', :genre => 'House', :format => 'Vinyl',
-             :date => '2012-12-01', :price => '5.95')
+             :date => '2011-12-01', :price => '5.95')
 Music.create(:release => 'Sun City EP', :artist => 'Nick Curly', :genre => 'Tech House', :format => 'CD',
-             :date => '2012-09-26', :price => '7.95')
+             :date => '2011-09-26', :price => '7.95')
