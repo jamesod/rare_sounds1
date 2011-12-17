@@ -1,10 +1,33 @@
-<h1>RareSounds.com</h1>
-<h3>Specialising in rare electronic music</h3>
-<p>Music releases in vinyl or CD format</p>
-
-<% form_tag musics_path, :method => 'get' do %>
+<div class="center">
+<div class="header"><img src="/images/logo.png" width="251" height="92" /></div>
+<div class="banner"><img src="/images/bannerimage.png" width="1000" height="257" /></div>
+<div class="searchdropdown"><% form_tag musics_path, :method => 'get' do %>
     <p>
       <%= text_field_tag :search_query, params[:search_query] %>
       <%= submit_tag "Search", :release => nil, :artist => nil %>
     </p>
-<% end %>
+<% end %></div>
+
+<div class="contents">
+  <p>FEATURED ARTISTS</p>
+  <table width="350" height="120" border="0">
+    <tr>
+      <td>Donec ut convallis odio. Sed dapibus fringilla pulvinar. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean cursus mauris eget lectus fermentum eleifend. Donec tortor nunc, volutpat ut eleifend quis, malesuada sed erat. Fusce in convallis libero.Donec ut convallis odio. SedDonec ut convallis odio. SedDonec ut convallis odio. Sed </td>
+    </tr>
+  </table>
+  <table width="351" height="107" border="0">
+    <tr>
+      <td width="209">Donec ut convallis odio. SedDonec ut convallis odio. Sed dapibus fringilla pulvinar. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean cursus mauris eget lectus fermentum eleifend. Donec tortor nunc, volutpat ut eleifend quis, malesuada sed erat. Fusce in convallis libero. </td>
+      <td width="132"><img src="/images/artist1.png" width="132" height="182" /></td>
+    </tr>
+  </table>
+  <p>&nbsp;</p>
+</div>
+<div class="sellers"><img src="/images/topselling.png" width="314" height="146" /></div>
+<div class="signup"></div>
+
+
+<div class="socialbox"></div>
+
+<div class="footer"></div>
+</div>
