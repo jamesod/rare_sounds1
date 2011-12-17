@@ -7,6 +7,9 @@
 #   Mayor.create(:name => 'Daley', :city => cities.first)
 
 #release artist genre format date price
+
+#Music.delete_all
+
 Music.create(:release => 'Could This Be', :artist => 'Noisia', :genre => 'Drum & Bass', :format => 'Vinyl',
              :date => '2012-11-22', :price => '4.95')
 Music.create(:release => 'Baby I Got It EP', :artist => 'Miguel Campbell', :genre => 'House', :format => 'Vinyl',
