@@ -4,9 +4,13 @@
 <div class="searchdropdown"><% form_tag musics_path, :method => 'get' do %>
     <p>
       <%= text_field_tag :search_query, params[:search_query] %>
+      <%#select(:format, :search_select, WelcomeController::FORMATS) %>
       <%= submit_tag "Search", :release => nil, :artist => nil %>
     </p>
-<% end %></div>
+
+<% end %>
+
+</div>
 
 <div class="contents">
   <p>FEATURED ARTISTS</p>
