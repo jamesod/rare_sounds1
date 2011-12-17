@@ -8,13 +8,13 @@
 </head>
 <body>
 
- <div class="navbar">
+<div class="navbar">
 <%= link_to "Home", :controller => "welcome", :action => "home"  %>
  | <%= link_to "Music", musics_path %>
  | <%= link_to "Sign Up", :controller =>  "welcome", :action => "sign_up" %>
+ </div>
 
-</div>
 <%= yield %>
-
+ </div>
 </body>
 </html>
