@@ -4,6 +4,7 @@ class MusicsController < ApplicationController
   def index
     @musics = Music.search(params[:search_query])#:search_select? for dropdown?
 
+
     @musics = @musics.sort_by { |music| music.date }.reverse #sorts listings, ascending by date - James (16/12 13:48)
 
     respond_to do |format|

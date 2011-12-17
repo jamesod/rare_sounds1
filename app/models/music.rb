@@ -9,3 +9,4 @@ class Music < ActiveRecord::Base
   end
 
 end
+
