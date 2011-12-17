@@ -1,3 +1,9 @@
+<div class="center">
+  <div class="header"><img src="/images/logo.png" width="251" height="92" align="left" />
+
+ <div class="navbar"></div>
+
+</div>
 <h1>Music Catalogue</h1>
 
 <% form_tag musics_path, :method => 'get' do %>
@@ -23,6 +29,7 @@
 
 <% @musics.each do |music| %>
   <tr>
+
     <td><%= music.release %></td>
     <td><%= music.artist %></td>
     <td><%= music.genre %></td>
@@ -39,3 +46,6 @@
 <br />
 
 <%= link_to 'New Music', new_music_path %>
+
+<div class="footer"></div>
+</div>
