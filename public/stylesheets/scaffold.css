@@ -2,7 +2,7 @@ body { background-color: #ffffff; color: #333; }
 
 body, p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
-  font-size:   13px;
+  font-size:   14px;
   line-height: 18px;
 
 }
@@ -28,6 +28,7 @@ body, p, ol, ul, td {
 	background-color: #E7E9D1;
 	margin-left: 10px;
 	margin-top: 10px;
+    font-size:  17px;
 }
 .contents {
 	height: auto;
@@ -63,9 +64,9 @@ body, p, ol, ul, td {
 	margin-left: auto;
 }
 
-.center .header .navbar {
-	height: 100px;
-	width: 600px;
+.navbar {
+	height: 20px;
+	width: 420px;
 	float: right;
 }
 

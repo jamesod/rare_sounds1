@@ -1,5 +1,9 @@
 <div class="center">
-<div class="header"><img src="/images/logo.png" width="251" height="92" align="left" /></div>
+<div class="header"><img src="/images/logo.png" width="251" height="92" align="left" />
+
+ <div class="navbar"></div>
+
+</div>
 <div class="banner"><img src="/images/bannerimage.png" width="1000" height="257" /></div>
 <div class="searchdropdown"><% form_tag musics_path, :method => 'get' do %>
     <p>
@@ -28,11 +32,13 @@
   <p>&nbsp;</p>
 </div>
 <div class="sellers"><img src="/images/topselling.png" width="314" height="146" /></div>
-<div class="signup"><div class="field">
+<div class="signup">Log In<div class="field">
     <%= label_tag :email %><br />
     <%= text_field_tag :email  %><br />
     <%= label_tag :password  %><br />
     <%= password_field_tag :password  %>
+
+  | <%= link_to "Sign Up", :controller =>  "welcome", :action => "sign_up" %>
 </div></div>
 
 
