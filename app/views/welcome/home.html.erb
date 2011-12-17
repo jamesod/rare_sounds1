@@ -1,3 +1,10 @@
 <h1>RareSounds.com</h1>
 <h3>Specialising in rare electronic music</h3>
 <p>Music releases in vinyl or CD format</p>
+
+<% form_tag musics_path, :method => 'get' do %>
+    <p>
+      <%= text_field_tag :search_query, params[:search_query] %>
+      <%= submit_tag "Search", :release => nil, :artist => nil %>
+    </p>
+<% end %>
