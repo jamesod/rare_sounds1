@@ -8,14 +8,12 @@
 </head>
 <body>
 
-<table width="200" border="0" align="right">
-  <tr>
-    <td><%= link_to "Home", :controller => "welcome", :action => "home"  %>
+ <div class="navbar">
+<%= link_to "Home", :controller => "welcome", :action => "home"  %>
  | <%= link_to "Music", musics_path %>
  | <%= link_to "Sign Up", :controller =>  "welcome", :action => "sign_up" %>
- &nbsp;</td>
-  </tr>
-</table>
+
+</div>
 <%= yield %>
 
 </body>

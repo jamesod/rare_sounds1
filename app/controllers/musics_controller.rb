@@ -4,11 +4,11 @@ class MusicsController < ApplicationController
   def index
     @musics = Music.search(params[:search_query])#:search_select? for dropdown?
 
-    @musics = @musics.sort_by{ |music| music.date}.reverse #sorts listings, ascending by date - James (16/12 13:48)
+    @musics = @musics.sort_by { |music| music.date }.reverse #sorts listings, ascending by date - James (16/12 13:48)
 
     respond_to do |format|
       format.html # index.html.erb
-      format.xml  { render :xml => @musics }
+      format.xml { render :xml => @musics }
     end
   end
 
@@ -19,7 +19,7 @@ class MusicsController < ApplicationController
 
     respond_to do |format|
       format.html # show.html.erb
-      format.xml  { render :xml => @music }
+      format.xml { render :xml => @music }
     end
   end
 
@@ -30,7 +30,7 @@ class MusicsController < ApplicationController
 
     respond_to do |format|
       format.html # new.html.erb
-      format.xml  { render :xml => @music }
+      format.xml { render :xml => @music }
     end
   end
 
@@ -47,10 +47,10 @@ class MusicsController < ApplicationController
     respond_to do |format|
       if @music.save
         format.html { redirect_to(@music, :notice => 'Music was successfully created.') }
-        format.xml  { render :xml => @music, :status => :created, :location => @music }
+        format.xml { render :xml => @music, :status => :created, :location => @music }
       else
         format.html { render :action => "new" }
-        format.xml  { render :xml => @music.errors, :status => :unprocessable_entity }
+        format.xml { render :xml => @music.errors, :status => :unprocessable_entity }
       end
     end
   end
@@ -63,10 +63,10 @@ class MusicsController < ApplicationController
     respond_to do |format|
       if @music.update_attributes(params[:music])
         format.html { redirect_to(@music, :notice => 'Music was successfully updated.') }
-        format.xml  { head :ok }
+        format.xml { head :ok }
       else
         format.html { render :action => "edit" }
-        format.xml  { render :xml => @music.errors, :status => :unprocessable_entity }
+        format.xml { render :xml => @music.errors, :status => :unprocessable_entity }
       end
     end
   end
@@ -79,7 +79,7 @@ class MusicsController < ApplicationController
 
     respond_to do |format|
       format.html { redirect_to(musics_url) }
-      format.xml  { head :ok }
+      format.xml { head :ok }
     end
   end
 end

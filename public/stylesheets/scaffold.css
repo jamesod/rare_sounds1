@@ -63,7 +63,11 @@ body, p, ol, ul, td {
 	margin-left: auto;
 }
 
-
+.center .header .navbar {
+	height: 100px;
+	width: 600px;
+	float: right;
+}
 
 pre {
   background-color: #eee;
