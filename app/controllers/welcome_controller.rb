@@ -5,4 +5,5 @@ class WelcomeController < ApplicationController
   def sign_up
   end
 
+  FORMATS = ['Vinyl', 'CD']
 end
