@@ -1,4 +1,8 @@
 RareSounds1::Application.routes.draw do
+  resources :line_items
+
+  resources :carts
+
   get "users/new"
 
   get "welcome/home"
