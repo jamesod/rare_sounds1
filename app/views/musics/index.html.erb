@@ -40,6 +40,7 @@
     <td><%= link_to 'Show', music %></td>
     <td><%= link_to 'Edit', edit_music_path(music) %></td>
     <td><%= link_to 'Destroy', music, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= button_to 'Add to Cart', line_items_path(:music_id => music) %></td>
   </tr>
 <% end %>
 </table>
