@@ -1,0 +1,11 @@
+<p id="notice"><%= notice %></p>
+
+<h2>Your Cart</h2>
+<ul>
+  <% for item in @cart.line_items %>
+      <li><%= item.music.name %></li>
+  <% end %>
+</ul>
+
+<%= link_to 'Edit', edit_cart_path(@cart) %> |
+<%= link_to 'Back', carts_path %>
