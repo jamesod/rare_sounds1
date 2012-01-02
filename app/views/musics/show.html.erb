@@ -14,7 +14,8 @@
 
 <p>
   <b>Artist:</b>
-  <%= @music.artist %>
+  <%= sanitize auto_link @music.artist %>
+
 </p>
 
 <p>

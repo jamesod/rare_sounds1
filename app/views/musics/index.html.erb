@@ -5,7 +5,7 @@
 
 </div>
 <h1>Music Catalogue</h1>
-
+<p id="notice"><%= notice %></p>
 <% form_tag musics_path, :method => 'get' do %>
     <p>
       <%= text_field_tag :search_query, params[:search_query] %>
