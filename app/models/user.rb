@@ -1,6 +1,6 @@
 require "digest"
 class User < ActiveRecord::Base
-  #has_many :musics
+  has_many :musics
   attr_accessor :password
   before_save :encrypt_password
 

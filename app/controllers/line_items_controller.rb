@@ -41,9 +41,9 @@ class LineItemsController < ApplicationController
   # POST /line_items.xml
   def create
     @cart = current_cart
-    product = Music.find(params[:music_id])
+    music = Music.find(params[:music_id])
     @line_item = @cart.add_music(music)
-    #@line_item = @cart.line_items.new(:product => product)
+    #@line_item = @cart.line_items.new(:music => music)
 
     #@line_item = LineItem.new()
     #@line_item.product = product

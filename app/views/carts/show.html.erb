@@ -3,7 +3,12 @@
 <h2>Your Cart</h2>
 <ul>
   <% for item in @cart.line_items %>
-      <li><%= item.music.name %></li>
+
+      <li><strong>Release: </strong><%= item.music.release %> &times; <%= item.quantity  %>
+      <br /><strong>Artist: </strong><%= item.music.artist %>
+      <br /><strong>Price: </strong>€<%= item.music.price %></li>
+      <br />
+
   <% end %>
 </ul>
 

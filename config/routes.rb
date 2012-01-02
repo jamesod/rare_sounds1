@@ -12,6 +12,7 @@ RareSounds1::Application.routes.draw do
   resources :users
   resources :sessions
 
+  match '/your_cart' => "carts#your_cart", :as => "your_cart"
   match '/login' => "sessions#create", :as => "login"
   match '/logout' => "sessions#destroy", :as => "logout"
 
