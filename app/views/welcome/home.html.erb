@@ -8,8 +8,8 @@
 <div class="searchdropdown"><% form_tag musics_path, :method => 'get' do %>
     <p>
       <%= text_field_tag :search_query, params[:search_query] %>
-      <%#select(:format, :search_select, WelcomeController::FORMATS) %>
-      <%= submit_tag "Search", :release => nil, :artist => nil %>
+      <%# select(:format, :search_select, WelcomeController::FORMATS) %> <!--search dropdown? -->
+      <%= submit_tag "Search", :release => nil, :artist => nil, :format => nil %>
     </p>
 
 <% end %>

@@ -1,73 +1,9 @@
-body { background-color: #ffffff; color: #333; }
+body { background-color: #fff; color: #333; }
 
 body, p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
-  font-size:   14px;
+  font-size:   13px;
   line-height: 18px;
-
-}
-.header {
-	height: 100px;
-	width: 1000px;
-}
-.banner {
-	height: auto;
-	width: 1000px;
-}
-.searchdropdown {
-	height: 250px;
-	width: 300px;
-	background-color: #F1ECE0;
-	margin: 20px;
-	float: left;
-}
-.signup {
-	float: left;
-	height: 250px;
-	width: 300px;
-	background-color: #E7E9D1;
-	margin-left: 10px;
-	margin-top: 10px;
-    font-size:  17px;
-}
-.contents {
-	height: auto;
-	width: 350px;
-	float: left;
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 14px;
-}
-.center .footer {
-	background-color: #0CF;
-}
-.center .socialbox {
-	float: left;
-	height: 100px;
-	width: 315px;
-	clear: none;
-}
-.center .footer {
-	height: 60px;
-	width: 1000px;
-	float: left;
-}
-.sellers {
-	float: left;
-	height: auto;
-	width: 300px;
-	margin-top: 20px;
-}
-.center {
-	height: 900px;
-	width: 1000px;
-	margin-right: auto;
-	margin-left: auto;
-}
-
-.navbar {
-	height: 20px;
-	width: 420px;
-	float: right;
 }
 
 pre {
@@ -78,7 +14,7 @@ pre {
 
 a { color: #000; }
 a:visited { color: #666; }
-a:hover { color: #ffffff; background-color:#87cefa; }
+a:hover { color: #fff; background-color:#000; }
 
 div.field, div.actions {
   margin-bottom: 10px;

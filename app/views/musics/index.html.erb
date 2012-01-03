@@ -1,53 +1,58 @@
 <div class="center">
-  <div class="header"><img src="/images/logo.png" width="251" height="92" align="left" />
+  <div class="header"><img src="/images/logo.png" width="251" height="92" align="left"/>
 
- <div class="navbar"></div>
+    <div class="navbar"></div>
 
-</div>
-<h1>Music Catalogue</h1>
-<p id="notice"><%= notice %></p>
-<% form_tag musics_path, :method => 'get' do %>
-    <p>
-      <%= text_field_tag :search_query, params[:search_query] %>
-      <%#select(:format, :search_select, WelcomeController::FORMATS) %>
-      <%= submit_tag "Search", :release => nil, :artist => nil, :format => nil %>
-    </p>
-<% end %>
+  </div>
+  <h1>Music Catalogue</h1>
 
-<table>
-  <tr style="text-align: left;">
-    <th style="width:160px;">Release</th>
-    <th style="width:190px;">Artist</th>
-    <th style="width:120px;">Genre</th>
-    <th style="width:100px;">Format</th>
-    <th style="width:120px;">Date</th>
-    <th style="width:120px;">Price</th>
-    <th></th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+  <p id="notice"><%= notice %></p>
+  <% form_tag musics_path, :method => 'get' do %>
+      <p>
+        <%= text_field_tag :search_query, params[:search_query] %>
+        <%#select(:format, :search_select, WelcomeController::FORMATS) %>
+        <%= select(:music, :format, Music::FORMATS)  %>
+        <%= submit_tag "Search", :release => nil, :artist => nil, :format => nil %>
+      </p>
+  <% end %>
 
-<% @musics.each do |music| %>
-  <tr>
+  <table>
+    <tr style="text-align: left;">
+      <th style="width:160px;">Release</th>
+      <th style="width:190px;">Artist</th>
+      <th style="width:120px;">Genre</th>
+      <th style="width:100px;">Format</th>
+      <th style="width:120px;">Date</th>
+      <th style="width:120px;">Price</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
 
-    <td><%= music.release %></td>
-    <td><%= music.artist %></td>
-    <td><%= music.genre %></td>
-    <td><%= music.format %></td>
-    <td><%= music.date %></td>
-    <td><%= music.price %></td>
-    <td><%= link_to 'Show', music %></td>
-    <td><%= link_to 'Edit', edit_music_path(music) %></td>
-    <td><%= link_to 'Destroy', music, :confirm => 'Are you sure?', :method => :delete %></td>
-    <td><%= button_to 'Add to Cart', line_items_path(:music_id => music) %></td>
-  </tr>
-<% end %>
-</table>
+    <% @musics.each do |music| %>
+        <tr>
 
-<br />
+          <td><%= music.release %></td>
+          <td><%= music.artist %></td>
+          <td><%= music.genre %></td>
+          <td><%= music.format %></td>
+          <td><%= music.date %></td>
+          <td><%= music.price %></td>
+          <td><%= link_to 'Show', music %></td>
+          <td><%= button_to 'Add to Cart', line_items_path(:music_id => music) %></td>
 
-<%= link_to 'New Music', new_music_path %>
+          <td><%= link_to 'Edit', edit_music_path(music) %></td>
+          <td><%= link_to 'Destroy', music, :confirm => 'Are you sure?', :method => :delete %></td>
 
-<div class="footer"></div>
+
+        </tr>
+    <% end %>
+  </table>
+
+  <br/>
+
+  <%= link_to 'New Music', new_music_path %>
+
+  <div class="footer"></div>
 </div>

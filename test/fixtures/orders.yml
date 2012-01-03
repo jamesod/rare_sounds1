@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: James Jones
+  address: MyText
+  email: james@rs.com
+  pay_type: Visa
+
+two:
+  name: MyString
+  address: MyText
+  email: MyString
+  pay_type: MyString

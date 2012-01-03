@@ -1,8 +1,12 @@
 class MusicsController < ApplicationController
+
   # GET /musics
   # GET /musics.xml
   def index
     @musics = Music.search(params[:search_query])#:search_select? for dropdown?
+    #:with => {:format  => params[:format]}
+    #@musics = Music.all :conditions => {:format => params[:format] && params[:search_query]}
+
 
 
     @musics = @musics.sort_by { |music| music.date }.reverse #sorts listings, ascending by date - James (16/12 13:48)
