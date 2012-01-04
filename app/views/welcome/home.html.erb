@@ -1,50 +1,70 @@
 <p id="notice"><%= notice %></p>
 
 <div class="center">
-<div class="header"><img src="/images/logo.png" width="251" height="92" align="left" />
+  <div class="header"><img src="/images/logo.png" width="251" height="92" align="left"/>
 
- <div class="navbar"></div>
+    <div class="navbar"></div>
 
+  </div>
+  <div class="banner"><img src="/images/bannerimage.png" width="1000" height="257" align="left"/></div>
+  <div class="searchdropdown">Search Our Music Database
+    <% form_tag musics_path, :method => 'get' do %>
+        <p>
+          <%= text_field_tag :search_query, params[:search_query] %>
+          <%# select(:format, :search_select, WelcomeController::FORMATS) %> <!--search dropdown? -->
+          <%= submit_tag "Search", :release => nil, :artist => nil, :format => nil %>
+        </p>
+
+    <% end %>
+
+
+  </div>
+
+
+  <div class="contents">
+    <p>FEATURED ARTISTS</p>
+    <table width="350" height="120" border="0">
+      <tr>
+        <td>Donec ut convallis odio. Sed dapibus fringilla pulvinar. Vestibulum ante ipsum primis in faucibus orci
+          luctus et ultrices posuere cubilia Curae; Aenean cursus mauris eget lectus fermentum eleifend. Donec tortor
+          nunc, volutpat ut eleifend quis, malesuada sed erat. Fusce in convallis libero.Donec ut convallis odio.
+          SedDonec ut convallis odio. SedDonec ut convallis odio. Sed
+        </td>
+      </tr>
+    </table>
+    <table width="351" height="107" border="0">
+      <tr>
+        <td width="209"> ut convallis odio. SedDonec ut convallis odio. Sed dapibus fringilla pulvinar. Vestibulum ante
+          ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean cursus mauris eget lectus
+          fermentum eleifend. Donec tortor nunc, volutpat ut eleifend quis, malesuada sed erat. Fusce in convallis
+          libero.
+        </td>
+        <td width="132"><img src="/images/artist1.png" width="132" height="182"/></td>
+      </tr>
+    </table>
+    <p>&nbsp;</p>
+  </div>
+  <div class="sellers"><img src="/images/topselling.png" width="314" height="146"/></div>
+  <% if !logged_in? %>
+  <div class="signup">Log In
+    <% form_tag sessions_path do %>
+        <div class="field"> <%= label_tag :email %>
+          <br/> <%= text_field_tag :email %>
+        </div>
+        <div class="field">
+          <%= label_tag :password %>
+          <br/>
+          <%= password_field_tag :password %> </div>
+        <div class="actions"> <%= submit_tag 'Login' %>
+        </div>
+    <% end %>
+
+    | Or <%= link_to "Sign Up", new_user_path %>
+  <% end %>
+  </div>
 </div>
-<div class="banner"><img src="/images/bannerimage.png" width="1000" height="257" /></div>
-<div class="searchdropdown"><% form_tag musics_path, :method => 'get' do %>
-    <p>
-      <%= text_field_tag :search_query, params[:search_query] %>
-      <%# select(:format, :search_select, WelcomeController::FORMATS) %> <!--search dropdown? -->
-      <%= submit_tag "Search", :release => nil, :artist => nil, :format => nil %>
-    </p>
-
-<% end %>
-
-</div>
-
-<div class="contents">
-  <p>FEATURED ARTISTS</p>
-  <table width="350" height="120" border="0">
-    <tr>
-      <td>Donec ut convallis odio. Sed dapibus fringilla pulvinar. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean cursus mauris eget lectus fermentum eleifend. Donec tortor nunc, volutpat ut eleifend quis, malesuada sed erat. Fusce in convallis libero.Donec ut convallis odio. SedDonec ut convallis odio. SedDonec ut convallis odio. Sed </td>
-    </tr>
-  </table>
-  <table width="351" height="107" border="0">
-    <tr>
-      <td width="209"> ut convallis odio. SedDonec ut convallis odio. Sed dapibus fringilla pulvinar. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean cursus mauris eget lectus fermentum eleifend. Donec tortor nunc, volutpat ut eleifend quis, malesuada sed erat. Fusce in convallis libero. </td>
-      <td width="132"><img src="/images/artist1.png" width="132" height="182" /></td>
-    </tr>
-  </table>
-  <p>&nbsp;</p>
-</div>
-<div class="sellers"><img src="/images/topselling.png" width="314" height="146" /></div>
-<div class="signup">Log In<div class="field">
-    <%= label_tag :email %><br />
-    <%= text_field_tag :email  %><br />
-    <%= label_tag :password  %><br />
-    <%= password_field_tag :password  %>
-
-  | <%= link_to "Sign Up", :controller =>  "welcome", :action => "sign_up" %>
-</div></div>
-
-
-<div class="socialbox"></div>
 
 <div class="footer"></div>
-</div>
+
+
+

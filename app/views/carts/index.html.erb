@@ -1,21 +1,32 @@
-<h1>Listing carts</h1>
+<div class="center">
+  <div class="header"><img src="/images/logo.png" width="251" height="92" align="left"/>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+    <div class="navbar"></div>
 
-<% @carts.each do |cart| %>
-  <tr>
-    <td><%= link_to 'Show', cart %></td>
-    <td><%= link_to 'Edit', edit_cart_path(cart) %></td>
-    <td><%= link_to 'Destroy', cart, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
-</table>
+  </div>
 
-<br />
+  <h1>Listing carts</h1>
 
-<%= link_to 'New Cart', new_cart_path %>
+  <table>
+    <tr>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+
+    <% @carts.each do |cart| %>
+        <tr>
+          <td><%= link_to 'Show', cart %></td>
+          <td><%= link_to 'Edit', edit_cart_path(cart) %></td>
+          <td><%= link_to 'Destroy', cart, :confirm => 'Are you sure?', :method => :delete %></td>
+        </tr>
+    <% end %>
+  </table>
+
+  <br/>
+
+  <%= link_to 'New Cart', new_cart_path %>
+
+  <div class="footer"></div>
+
+</div>
