@@ -1,46 +1,60 @@
 <div class="center">
-  <div class="header"><img src="/images/logo.png" width="251" height="92" align="left" />
+  <div class="header"><img src="/images/logo.png" width="251" height="92" align="left"/>
 
- <div class="navbar"></div>
+    <div class="navbar"></div>
 
-</div>
+  </div>
 
-<p id="notice"><%= notice %></p>
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Release:</b>
-  <%= @music.release %>
-</p>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
 
-<p>
-  <b>Artist:</b>
-  <%= sanitize auto_link @music.artist %>
+  <p>
+    <b>Release:</b>
+    <%= @music.release %>
+  </p>
 
-</p>
+  <p>
+    <b>Artist:</b>
+    <%= sanitize auto_link @music.artist %>
 
-<p>
-  <b>Genre:</b>
-  <%= @music.genre %>
-</p>
+  </p>
 
-<p>
-  <b>Format:</b>
-  <%= @music.format %>
-</p>
+  <p>
+    <b>Genre:</b>
+    <%= @music.genre %>
+  </p>
 
-<p>
-  <b>Date:</b>
-  <%= @music.date %>
-</p>
+  <p>
+    <b>Format:</b>
+    <%= @music.format %>
+  </p>
 
-<p>
-  <b>Price:</b>
-  <%= @music.price %>
-</p>
+  <p>
+    <b>Date:</b>
+    <%= @music.date %>
+  </p>
+
+  <p>
+    <b>Price:</b>
+    <%= @music.price %>
+  </p>
 
 
-<%= link_to 'Edit', edit_music_path(@music) %> |
-<%= link_to 'Back', musics_path %>
 
-<div class="footer"></div>
+  <% if logged_in? && current_user.email == "admin@rs.com" %>
+      <%= link_to 'Edit', edit_music_path(@music) %>
+  <% end %>
+
+  <% if logged_in? %>
+      <%= button_to 'Add to Cart', line_items_path(:music_id => @music) %>
+  <% end %>
+  |
+  <%= link_to 'Back', musics_path %>
+
+  <div class="footer"></div>
 </div>

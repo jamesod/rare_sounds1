@@ -31,7 +31,6 @@
 
     <% @musics.each do |music| %>
         <tr>
-
           <td><%= music.release %></td>
           <td><%= music.artist %></td>
           <td><%= music.genre %></td>
@@ -40,6 +39,7 @@
           <td><%= number_to_currency(music.price, :unit => '&euro;') %><%# music.price %></td>
           <td><%= link_to 'Show', music %></td>
 
+          <!--Admin Alternative 4 Jan-->
           <% if logged_in? && current_user.email == "admin@rs.com" %>
               <td><%= link_to 'Edit', edit_music_path(music) %></td>
               <td><%= link_to 'Destroy', music, :confirm => 'Are you sure?', :method => :delete %></td>
@@ -62,8 +62,8 @@
       <p>You are not logged in.<br/>
         Please <%= link_to "Login", login_path %> or <%= link_to "Sign Up", new_user_path %> to purchase music.</p>
   <% end %>
-
-  <%= link_to 'New Music', new_music_path %>
-
+  <% if logged_in? && current_user.email == "admin@rs.com" %>
+    <%= link_to 'New Music', new_music_path %>
+  <% end %>
   <div class="footer"></div>
 </div>
