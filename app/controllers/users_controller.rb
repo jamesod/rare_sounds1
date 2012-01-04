@@ -6,7 +6,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(params[:user])
     if @user.save
-      redirect_to musics_path, :notice => 'You are now Signed Up to RareSounds.com'
+      redirect_to login_path, :notice => 'You are now Signed Up. Please enter your details again to Log In to RareSounds.com'
     else
       render :action => new
     end

@@ -25,6 +25,8 @@ class ApplicationController < ActionController::Base
 # Make logged_in? available in templates as a helper
   helper_method :logged_in?
 
+
+
   def access_denied
     redirect_to login_path, :notice => "Please log in to continue" and return false
   end

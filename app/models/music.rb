@@ -12,12 +12,15 @@ class Music < ActiveRecord::Base
     end
 
     #for dropdown option?
+
+
+  end
     #if search_select
      # find(:all, :conditions => {:format => params[:format]})
     #else
      # find(:all)
     #end
-  end
+
 
   FORMATS = ['Vinyl', 'CD']
 

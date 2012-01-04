@@ -11,7 +11,6 @@
       <p>
         <%= text_field_tag :search_query, params[:search_query] %>
         <%#select(:format, :search_select, WelcomeController::FORMATS) %>
-        <%= select(:music, :format, Music::FORMATS) %>
         <%= submit_tag "Search", :release => nil, :artist => nil, :format => nil %>
       </p>
   <% end %>
@@ -38,13 +37,20 @@
           <td><%= music.genre %></td>
           <td><%= music.format %></td>
           <td><%= music.date %></td>
-          <td><%= number_to_currency( music.price, :unit => '&euro;') %><%# music.price %></td>
+          <td><%= number_to_currency(music.price, :unit => '&euro;') %><%# music.price %></td>
+          <td><%= link_to 'Show', music %></td>
+
+          <% if logged_in? && current_user.email == "admin@rs.com" %>
+              <td><%= link_to 'Edit', edit_music_path(music) %></td>
+              <td><%= link_to 'Destroy', music, :confirm => 'Are you sure?', :method => :delete %></td>
+
+
+          <% end %>
           <% if logged_in? %>
               <td><%= button_to 'Add to Cart', line_items_path(:music_id => music) %></td>
           <% end %>
-          <!--td><%# link_to 'Show', music %></td>
-          <td><%# link_to 'Edit', edit_music_path(music) %></td>
-          <td><%# link_to 'Destroy', music, :confirm => 'Are you sure?', :method => :delete %></td-->
+
+
         </tr>
 
 
@@ -53,7 +59,8 @@
 
   <br/>
   <% if !logged_in? %>
-      <p>Please Log In/Sign Up to purchase music</p>
+      <p>You are not logged in.<br/>
+        Please <%= link_to "Login", login_path %> or <%= link_to "Sign Up", new_user_path %> to purchase music.</p>
   <% end %>
 
   <%= link_to 'New Music', new_music_path %>
