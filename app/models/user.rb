@@ -2,6 +2,8 @@ require "digest"
 class User < ActiveRecord::Base
   has_many :musics
 
+  validates :email, :presence => true, :uniqueness => true
+  #validates :password, :confirmation => true
 
 
   attr_accessor :password
