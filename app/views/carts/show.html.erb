@@ -1,20 +1,29 @@
-<p id="notice"><%= notice %></p>
+<div class="center">
+  <div class="header"><img src="/images/logo.png" width="251" height="92" align="left"/>
 
-<h2>Your Cart</h2>
-<ul>
-  <% for item in @cart.line_items %>
+    <div class="navbar"></div>
 
-      <li><strong>Release: </strong><%= item.music.release %> &times; <%= item.quantity  %>
-      <br /><strong>Artist: </strong><%= item.music.artist %>
-      <br /><strong>Price: </strong>€<%= item.music.price %></li>
-      <br />
+  </div>
+  <p id="notice"><%= notice %></p>
 
-  <% end %>
-  Total Price: <%= number_to_currency( @cart.total_price, :unit => '&euro;') %><br/>
- <br/>
-  <%= button_to 'Checkout', new_order_path, :method => :get %>
-  <%= button_to 'Empty cart', @cart, :method => :delete, :confirm => 'Are you sure?' %>
-</ul>
+  <h2>Your Cart</h2>
+  <ul>
+    <% for item in @cart.line_items %>
 
-<%= link_to 'Edit', edit_cart_path(@cart) %> |
-<%= link_to 'Back', carts_path %>
+        <li><strong>Release: </strong><%= item.music.release %> &times; <%= item.quantity %>
+          <br/><strong>Artist: </strong><%= item.music.artist %>
+          <br/><strong>Price: </strong>€<%= item.music.price %></li>
+        <br/>
+
+    <% end %>
+    Total Price: <%= number_to_currency(@cart.total_price, :unit => '&euro;') %>
+    <br/>
+    <br/>
+    <%= button_to 'Checkout', new_order_path, :method => :get %>
+    <%= button_to 'Empty cart', @cart, :method => :delete, :confirm => 'Are you sure?' %>
+  </ul>
+
+  <%= link_to 'Edit', edit_cart_path(@cart) %> |
+  <%= link_to 'Back', carts_path %>
+
+</div>

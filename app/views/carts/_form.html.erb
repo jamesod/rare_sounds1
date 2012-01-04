@@ -1,17 +1,25 @@
-<%= form_for(@cart) do |f| %>
-  <% if @cart.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@cart.errors.count, "error") %> prohibited this cart from being saved:</h2>
+<div class="center">
+  <div class="header"><img src="/images/logo.png" width="251" height="92" align="left"/>
 
-      <ul>
-      <% @cart.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+    <div class="navbar"></div>
 
-  <div class="actions">
-    <%= f.submit %>
   </div>
-<% end %>
+  <%= form_for(@cart) do |f| %>
+      <% if @cart.errors.any? %>
+          <div id="error_explanation">
+            <h2><%= pluralize(@cart.errors.count, "error") %> prohibited this cart from being saved:</h2>
+
+            <ul>
+              <% @cart.errors.full_messages.each do |msg| %>
+                  <li><%= msg %></li>
+              <% end %>
+            </ul>
+          </div>
+      <% end %>
+
+      <div class="actions">
+        <%= f.submit %>
+      </div>
+  <% end %>
+ <div class="footer"></div>
+</div>

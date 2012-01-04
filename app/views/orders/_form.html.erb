@@ -1,3 +1,10 @@
+<div class="center">
+  <div class="header"><img src="/images/logo.png" width="251" height="92" align="left"/>
+
+    <div class="navbar"></div>
+
+  </div>
+
 <%= form_for(@order) do |f| %>
   <% if @order.errors.any? %>
     <div id="error_explanation">
@@ -31,3 +38,6 @@
     <%= f.submit 'Place Order' %>
   </div>
 <% end %>
+
+
+    </div>

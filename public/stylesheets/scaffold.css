@@ -1,9 +1,108 @@
-body { background-color: #fff; color: #333; }
+body { background-color: #ffffff; color: #333; }
 
 body, p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
-  font-size:   13px;
+  font-size:   14px;
   line-height: 18px;
+
+}
+.header {
+	height: 100px;
+	width: 1000px;
+}
+.banner {
+	height: auto;
+	width: 1000px;
+}
+.searchdropdown {
+	height: 150px;
+	width: 300px;
+	background-color: #F1ECE0;
+	margin: 20px;
+	float: left;
+    -moz-border-radius: 11px;
+    -webkit-border-radius: 11px;
+    border-radius: 11px;
+    /*IE 7 AND 8 DO NOT SUPPORT BORDER RADIUS*/
+    -moz-box-shadow: 0px 0px 4px #000000;
+    -webkit-box-shadow: 0px 0px 4px #000000;
+    box-shadow: 0px 0px 4px #000000;
+    /*IE 7 AND 8 DO NOT SUPPORT BLUR PROPERTY OF SHADOWS*/
+    opacity: 0.59;
+    -ms-filter: progid: DXImageTransform . Microsoft . Alpha(Opacity = 59);
+    /*-ms-filter must come before filter*/
+    filter: alpha(opacity = 59);
+    /*INNER ELEMENTS MUST NOT BREAK THIS ELEMENTS BOUNDARIES*/
+    /*All filters must be placed together*/
+}
+.signup {
+	float: left;
+	height: 250px;
+	width: 300px;
+	background-color: #E7E9D1;
+	margin-left: 10px;
+	margin-top: 10px;
+    font-size:  17px;
+    -moz-border-radius: 11px;
+    -webkit-border-radius: 11px;
+    border-radius: 11px;
+    /*IE 7 AND 8 DO NOT SUPPORT BORDER RADIUS*/
+    -moz-box-shadow: 0px 0px 4px #000000;
+    -webkit-box-shadow: 0px 0px 4px #000000;
+    box-shadow: 0px 0px 4px #000000;
+    /*IE 7 AND 8 DO NOT SUPPORT BLUR PROPERTY OF SHADOWS*/
+    opacity: 0.59;
+    -ms-filter: progid: DXImageTransform . Microsoft . Alpha(Opacity = 59);
+    /*-ms-filter must come before filter*/
+    filter: alpha(opacity = 59);
+    /*INNER ELEMENTS MUST NOT BREAK THIS ELEMENTS BOUNDARIES*/
+    /*All filters must be placed together*/
+
+
+}
+.contents {
+	height: auto;
+	width: 350px;
+	float: left;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+}
+
+.center .footer {
+	background-color: #0CF;
+}
+
+
+.center .socialbox {
+	float: left;
+	height: 100px;
+	width: 315px;
+	clear: none;
+}
+.center .footer {
+	height: 30px;
+	width: 1000px;
+	float: left;
+}
+.sellers {
+	float: left;
+	height: auto;
+	width: 300px;
+	margin-top: 20px;
+
+
+}
+.center {
+	height: 800px;
+	width: 1000px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.navbar {
+	height: 20px;
+	width: 420px;
+	float: right;
 }
 
 pre {
@@ -14,7 +113,7 @@ pre {
 
 a { color: #000; }
 a:visited { color: #666; }
-a:hover { color: #fff; background-color:#000; }
+a:hover { color: #ffffff; background-color:#87cefa; }
 
 div.field, div.actions {
   margin-bottom: 10px;

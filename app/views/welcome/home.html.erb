@@ -6,8 +6,8 @@
  <div class="navbar"></div>
 
 </div>
-<div class="banner"><img src="/images/bannerimage.png" width="1000" height="257" /></div>
-<div class="searchdropdown"><% form_tag musics_path, :method => 'get' do %>
+<div class="banner"><img src="/images/bannerimage.png" width="1000" height="257" align="left"/></div>
+<div class="searchdropdown">Search Our Music Database<% form_tag musics_path, :method => 'get' do %>
     <p>
       <%= text_field_tag :search_query, params[:search_query] %>
       <%# select(:format, :search_select, WelcomeController::FORMATS) %> <!--search dropdown? -->
@@ -16,7 +16,11 @@
 
 <% end %>
 
+
+
 </div>
+
+
 
 <div class="contents">
   <p>FEATURED ARTISTS</p>
@@ -34,17 +38,25 @@
   <p>&nbsp;</p>
 </div>
 <div class="sellers"><img src="/images/topselling.png" width="314" height="146" /></div>
-<div class="signup">Log In<div class="field">
-    <%= label_tag :email %><br />
-    <%= text_field_tag :email  %><br />
-    <%= label_tag :password  %><br />
-    <%= password_field_tag :password  %>
+<div class="signup">Log In  <p id="notice"><%= notice %></p>
+  <% form_tag sessions_path do %>
+      <div class="field"> <%= label_tag :email %>
+        <br/> <%= text_field_tag :email %>
+      </div>
+      <div class="field">
+        <%= label_tag :password %>
+        <br/>
+        <%= password_field_tag :password %> </div>
+      <div class="actions"> <%= submit_tag 'Login' %>
+      </div>
+  <% end %>
 
-  | <%= link_to "Sign Up", :controller =>  "welcome", :action => "sign_up" %>
+    | <%= link_to "Sign Up", :controller =>  "welcome", :action => "sign_up" %>
 </div></div>
-
-
-<div class="socialbox"></div>
+    </div>
 
 <div class="footer"></div>
+
+
+
 </div>
